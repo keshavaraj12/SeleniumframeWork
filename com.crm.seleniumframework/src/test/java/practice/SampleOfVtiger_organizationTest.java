@@ -23,6 +23,7 @@ public class SampleOfVtiger_organizationTest extends BaseClass{
 			int ranNum = javalibrary.getRandomNumber(1000);
 			System.out.println("ranNum="+ranNum);
 			String cellsheet = exelLibrary.readStringDataFromExcel("sheet1",0,1)+ranNum;
+			System.out.println(cellsheet);
 			
 			OrganizationsPage organization=new OrganizationsPage(driver);
 			organization.organizationpage(cellsheet);
