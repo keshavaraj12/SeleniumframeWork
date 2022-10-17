@@ -1,76 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-14T11:37:52 IST" name="Default suite" finished-at="2022-10-14T11:38:45 IST" duration-ms="53397">
+  <suite started-at="2022-10-17T14:26:38 IST" name="Default suite" finished-at="2022-10-17T14:27:18 IST" duration-ms="39859">
     <groups>
     </groups>
-    <test started-at="2022-10-14T11:37:52 IST" name="Default test" finished-at="2022-10-14T11:38:45 IST" duration-ms="53397">
-      <class name="practice.DataproviderTest">
-        <test-method signature="companyDetails(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataproviderTest@f0da945]" started-at="2022-10-14T11:37:52 IST" name="companyDetails" data-provider="dataProvider_test" finished-at="2022-10-14T11:38:09 IST" duration-ms="17828" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[raju]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ramu]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2022-10-17T14:26:38 IST" name="Default test" finished-at="2022-10-17T14:27:18 IST" duration-ms="39859">
+      <class name="practice.SampleOfVtiger_organizationTest">
+        <test-method is-config="true" signature="BS()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:26:38 IST" name="BS" finished-at="2022-10-17T14:26:38 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- companyDetails -->
-        <test-method signature="companyDetails(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataproviderTest@f0da945]" started-at="2022-10-14T11:38:09 IST" name="companyDetails" data-provider="dataProvider_test" finished-at="2022-10-14T11:38:27 IST" duration-ms="17450" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[rajesh]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ramesh]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- BS -->
+        <test-method is-config="true" signature="BT()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:26:38 IST" name="BT" finished-at="2022-10-17T14:26:38 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- companyDetails -->
-        <test-method signature="companyDetails(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:practice.DataproviderTest@f0da945]" started-at="2022-10-14T11:38:27 IST" name="companyDetails" data-provider="dataProvider_test" finished-at="2022-10-14T11:38:45 IST" duration-ms="18084" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[rakesh]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ramaraju]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- BT -->
+        <test-method is-config="true" signature="BC()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:26:38 IST" name="BC" finished-at="2022-10-17T14:26:45 IST" duration-ms="6882" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- companyDetails -->
-      </class> <!-- practice.DataproviderTest -->
+        </test-method> <!-- BC -->
+        <test-method is-config="true" signature="BM()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:26:45 IST" name="BM" finished-at="2022-10-17T14:26:54 IST" duration-ms="9193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BM -->
+        <test-method signature="createorganization()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:26:54 IST" name="createorganization" finished-at="2022-10-17T14:27:17 IST" duration-ms="22492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createorganization -->
+        <test-method is-config="true" signature="AM()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:27:17 IST" name="AM" finished-at="2022-10-17T14:27:17 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+        <test-method is-config="true" signature="AC()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:27:17 IST" name="AC" finished-at="2022-10-17T14:27:18 IST" duration-ms="1252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AC -->
+        <test-method is-config="true" signature="AT()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:27:18 IST" name="AT" finished-at="2022-10-17T14:27:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AT -->
+        <test-method is-config="true" signature="AS()[pri:0, instance:practice.SampleOfVtiger_organizationTest@1c5920df]" started-at="2022-10-17T14:27:18 IST" name="AS" finished-at="2022-10-17T14:27:18 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AS -->
+      </class> <!-- practice.SampleOfVtiger_organizationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
