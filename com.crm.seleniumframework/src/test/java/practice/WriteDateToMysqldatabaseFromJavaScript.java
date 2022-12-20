@@ -12,7 +12,7 @@ public static void main(String[] args) throws Throwable {
 	DriverManager.registerDriver(driverRef);
 	Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/test_yantra","root","root");
 	Statement stat= conn.createStatement();
-	String query="insert into student(first_name,last_name,address,ph_num)values('RAJU','RM','INDIA','98764')";
+	String query="insert into student(id,first_name,last_name,address)values('RAJU','RM','INDIA')";
 	//String query1="ALTER TABLE student DROP ph_num";
 	int result=stat.executeUpdate(query);
 	//int result1=stat.executeUpdate(query1);

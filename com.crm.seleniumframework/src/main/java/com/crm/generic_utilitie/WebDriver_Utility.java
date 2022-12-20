@@ -1,8 +1,10 @@
+
 package com.crm.generic_utilitie;
 
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,7 +20,7 @@ public class WebDriver_Utility {
 		 This method used to Sychronize the element in Dom
 		  */
 		public void useImplicitWait(WebDriver driver) {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
 		}
 		
 		/*
@@ -44,7 +46,7 @@ public class WebDriver_Utility {
 		 This method used to post-condition in script for minimize the window
 		 */
 		public void useMinimize(WebDriver driver) {
-			driver.manage().window().minimize();
+			driver.manage().window().maximize();
 		}
 		
 		/*
@@ -109,7 +111,7 @@ public class WebDriver_Utility {
 		public void useAction(WebDriver driver,WebElement element) {
 			Actions act=new Actions(driver);
 			//act.click().perform();
-			act.click(element);
+			act.click(element).perform();
 		}
 		/*
 		 * This method is used to quit the browser

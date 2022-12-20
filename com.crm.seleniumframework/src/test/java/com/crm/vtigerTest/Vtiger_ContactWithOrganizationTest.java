@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import com.crm.generic_utilitie.BaseClass;
 import com.crm.generic_utilitie.Exel_Utility;
 import com.crm.generic_utilitie.Java_Utility;
+import com.crm.generic_utilitie.WebDriver_Utility;
 import com.crm.pomrepositary.ContactsPage;
 import com.crm.pomrepositary.HomePage;
 
@@ -25,6 +26,8 @@ public class Vtiger_ContactWithOrganizationTest extends BaseClass {
 		//create the contact with organization  after verify the page and delete the contactaccount 
 		ContactsPage contact=new ContactsPage(driver);
 		contact.contactpage(cellsheet,"raj");
+		WebDriver_Utility weblibrary=new WebDriver_Utility();
+		weblibrary.useImplicitWait(driver);
 		contact.ContactWithOrganization(driver,"Contacts");
 		contact.clickonsavebutton();
 		contact.contactVerification(cellsheet);

@@ -5,6 +5,7 @@ import java.time.Duration;
 import java.util.Properties;
 import java.util.Random;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -26,8 +27,8 @@ public static void main(String[] args) throws Throwable {
 	System.setProperty(key, value);
 	WebDriver driver=new ChromeDriver();
 	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 	
 	FileInputStream fis=new FileInputStream("./src/test/resources/commondata1.properties");
 	Properties pobj=new Properties();
