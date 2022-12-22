@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.DataproviderTest">
+      <class name="seleniumgrid.Launch_Browser">
         <methods>
-          <include name="companyDetails" invocation-numbers="1 2"/>
+          <include name="lanchbrowser"/>
         </methods>
-      </class> <!-- practice.DataproviderTest -->
+      </class> <!-- seleniumgrid.Launch_Browser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
