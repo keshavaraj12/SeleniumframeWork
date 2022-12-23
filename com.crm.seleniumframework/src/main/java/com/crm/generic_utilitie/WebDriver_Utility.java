@@ -1,17 +1,25 @@
 
 package com.crm.generic_utilitie;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 
 public class WebDriver_Utility {
 	public WebDriver driver;
@@ -20,7 +28,7 @@ public class WebDriver_Utility {
 		 This method used to Sychronize the element in Dom
 		  */
 		public void useImplicitWait(WebDriver driver) {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(500));
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		}
 		
 		/*
@@ -76,6 +84,34 @@ public class WebDriver_Utility {
 		      		break;
 		      	}
 		}}
+		
+		public String takeScreenshot(WebDriver driver) throws IOException {
+//			String timeStamp = LocalDateTime.now().toString().replace(':', '-');
+//			String testname = result.getMethod().getMethodName();
+//			System.out.println(testname+"Take ScreenShot");	
+//			EventFiringWebDriver pdriver=new EventFiringWebDriver(BaseClass.sdriver);
+//			File srcfile=pdriver.getScreenshotAs(OutputType.FILE);
+//			try {
+//				File destfile=new File("./ScreenShots/"+timeStamp+"+"+testname+".png");
+//				FileUtils.copyFile(srcfile, destfile);
+//			} catch (Throwable e) {
+//				e.printStackTrace();
+//			}
+		String timeStamp = LocalDateTime.now().toString().replace(':', '-');
+		TakesScreenshot sc=(TakesScreenshot) driver;
+		File srcfile=sc.getScreenshotAs(OutputType.FILE);
+		File destfile=new File("./ScreenShots/"+timeStamp+".png");
+		FileUtils.copyFile(srcfile, destfile);
+		return timeStamp;
+		
+		}
+		
+		
+		
+		
+		
+		
+		
 		
 		/*
 		 This method used dropdown element to get all options 

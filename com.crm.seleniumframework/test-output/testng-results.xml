@@ -1,49 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="4" total="7" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-22T23:23:34 IST" name="Suite" finished-at="2022-12-22T23:23:51 IST" duration-ms="16587">
+  <suite started-at="2022-12-23T21:49:33 IST" name="Suite" finished-at="2022-12-23T21:50:12 IST" duration-ms="38756">
     <groups>
     </groups>
-    <test started-at="2022-12-22T23:23:34 IST" name="Test" finished-at="2022-12-22T23:23:51 IST" duration-ms="16587">
-      <class name="practice.SampleOfVtiger_organizationTest">
-        <test-method is-config="true" signature="BS()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:34 IST" name="BS" finished-at="2022-12-22T23:23:34 IST" duration-ms="6" status="PASS">
+    <test started-at="2022-12-23T21:49:33 IST" name="Test" finished-at="2022-12-23T21:50:12 IST" duration-ms="38756">
+      <class name="extentReportCreation.Testcase1">
+        <test-method is-config="true" signature="BS()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:33 IST" name="BS" finished-at="2022-12-23T21:49:33 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BS -->
-        <test-method is-config="true" signature="BT()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:34 IST" name="BT" finished-at="2022-12-22T23:23:34 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="BT()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:33 IST" name="BT" finished-at="2022-12-23T21:49:33 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BT -->
-        <test-method is-config="true" signature="BC()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:34 IST" name="BC" finished-at="2022-12-22T23:23:36 IST" duration-ms="2069" status="PASS">
+        <test-method is-config="true" signature="BC()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:33 IST" name="BC" finished-at="2022-12-23T21:49:35 IST" duration-ms="1726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BC -->
-        <test-method is-config="true" signature="BM()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:36 IST" name="BM" finished-at="2022-12-22T23:23:42 IST" duration-ms="6051" status="PASS">
+        <test-method is-config="true" signature="BM()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:35 IST" name="BM" finished-at="2022-12-23T21:49:40 IST" duration-ms="4638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BM -->
-        <test-method signature="createorganization()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:42 IST" name="createorganization" finished-at="2022-12-22T23:23:50 IST" duration-ms="8193" status="PASS">
+        <test-method signature="testcase1()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:40 IST" name="testcase1" finished-at="2022-12-23T21:49:40 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createorganization -->
-        <test-method is-config="true" signature="AM()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:50 IST" name="AM" finished-at="2022-12-22T23:23:50 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AM -->
-        <test-method is-config="true" signature="AC()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:50 IST" name="AC" finished-at="2022-12-22T23:23:51 IST" duration-ms="244" status="PASS">
+        </test-method> <!-- testcase1 -->
+        <test-method is-config="true" signature="AC()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:40 IST" name="AC" finished-at="2022-12-23T21:49:40 IST" duration-ms="719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AC -->
-        <test-method is-config="true" signature="AT()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:51 IST" name="AT" finished-at="2022-12-22T23:23:51 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AM()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:49:40 IST" name="AM" finished-at="2022-12-23T21:49:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+        <test-method is-config="true" signature="AT()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:50:12 IST" name="AT" finished-at="2022-12-23T21:50:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AT -->
-        <test-method is-config="true" signature="AS()[pri:0, instance:practice.SampleOfVtiger_organizationTest@65c7a252]" started-at="2022-12-22T23:23:51 IST" name="AS" finished-at="2022-12-22T23:23:51 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="AS()[pri:0, instance:extentReportCreation.Testcase1@4145bad8]" started-at="2022-12-23T21:50:12 IST" name="AS" finished-at="2022-12-23T21:50:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AS -->
-      </class> <!-- practice.SampleOfVtiger_organizationTest -->
+      </class> <!-- extentReportCreation.Testcase1 -->
+      <class name="extentReportCreation.Testcase3">
+        <test-method is-config="true" signature="BC()[pri:0, instance:extentReportCreation.Testcase3@2a7f1f10]" started-at="2022-12-23T21:50:02 IST" name="BC" finished-at="2022-12-23T21:50:03 IST" duration-ms="1637" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BC -->
+        <test-method is-config="true" signature="BM()[pri:0, instance:extentReportCreation.Testcase3@2a7f1f10]" started-at="2022-12-23T21:50:03 IST" name="BM" finished-at="2022-12-23T21:50:12 IST" duration-ms="8559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BM -->
+        <test-method signature="testcase3()[pri:0, instance:extentReportCreation.Testcase3@2a7f1f10]" started-at="2022-12-23T21:50:12 IST" name="testcase3" finished-at="2022-12-23T21:50:12 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase3 -->
+        <test-method is-config="true" signature="AC()[pri:0, instance:extentReportCreation.Testcase3@2a7f1f10]" started-at="2022-12-23T21:50:12 IST" name="AC" finished-at="2022-12-23T21:50:12 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AC -->
+        <test-method is-config="true" signature="AM()[pri:0, instance:extentReportCreation.Testcase3@2a7f1f10]" started-at="2022-12-23T21:50:12 IST" name="AM" finished-at="2022-12-23T21:50:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AM -->
+      </class> <!-- extentReportCreation.Testcase3 -->
+      <class name="extentReportCreation.Testcaseforbase">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:33 IST" name="configBS" finished-at="2022-12-23T21:49:33 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBT()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:33 IST" name="configBT" finished-at="2022-12-23T21:49:33 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBT -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:40 IST" name="setUp" finished-at="2022-12-23T21:49:45 IST" duration-ms="4643" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="configBC()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:40 IST" name="configBC" finished-at="2022-12-23T21:49:40 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBC -->
+        <test-method signature="testcase2()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:45 IST" name="testcase2" finished-at="2022-12-23T21:49:45 IST" duration-ms="106" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at extentReportCreation.Testcaseforbase.testcase2(Testcaseforbase.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+at java.base/java.lang.Thread.run(Thread.java:831)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testcase2 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:49:45 IST" name="tearDown" finished-at="2022-12-23T21:50:02 IST" duration-ms="16424" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testcase2 status=FAILURE method=Testcaseforbase.testcase2()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="configAC()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:50:02 IST" name="configAC" finished-at="2022-12-23T21:50:02 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAC -->
+        <test-method is-config="true" signature="configAT()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:50:12 IST" name="configAT" finished-at="2022-12-23T21:50:12 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAT -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:extentReportCreation.Testcaseforbase@298a5e20]" started-at="2022-12-23T21:50:12 IST" name="configAS" finished-at="2022-12-23T21:50:12 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAS -->
+      </class> <!-- extentReportCreation.Testcaseforbase -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

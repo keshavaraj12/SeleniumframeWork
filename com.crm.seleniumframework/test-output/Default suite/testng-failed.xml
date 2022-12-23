@@ -3,11 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumgrid.Launch_Browser">
+      <class name="extentReportCreation.Testcase2">
         <methods>
-          <include name="lanchbrowser"/>
+          <include name="AM"/>
+          <include name="BM"/>
+          <include name="AS"/>
+          <include name="BT"/>
+          <include name="AC"/>
+          <include name="BS"/>
+          <include name="BC"/>
+          <include name="testcase2"/>
+          <include name="AT"/>
         </methods>
-      </class> <!-- seleniumgrid.Launch_Browser -->
+      </class> <!-- extentReportCreation.Testcase2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
