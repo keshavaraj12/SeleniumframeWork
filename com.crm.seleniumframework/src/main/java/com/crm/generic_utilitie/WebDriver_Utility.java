@@ -83,9 +83,8 @@ public class WebDriver_Utility {
 		      	{
 		      		break;
 		      	}
-		}}
-		
-		public String takeScreenshot(WebDriver driver) throws IOException {
+		}} 
+		public String takeScreenshot(WebDriver driver,String result) throws IOException {
 //			String timeStamp = LocalDateTime.now().toString().replace(':', '-');
 //			String testname = result.getMethod().getMethodName();
 //			System.out.println(testname+"Take ScreenShot");	
@@ -98,9 +97,10 @@ public class WebDriver_Utility {
 //				e.printStackTrace();
 //			}
 		String timeStamp = LocalDateTime.now().toString().replace(':', '-');
+		String testname = result;
 		TakesScreenshot sc=(TakesScreenshot) driver;
 		File srcfile=sc.getScreenshotAs(OutputType.FILE);
-		File destfile=new File("./ScreenShots/"+timeStamp+".png");
+		File destfile=new File("./ScreenShots/"+timeStamp+testname+" .png");
 		FileUtils.copyFile(srcfile, destfile);
 		return timeStamp;
 		

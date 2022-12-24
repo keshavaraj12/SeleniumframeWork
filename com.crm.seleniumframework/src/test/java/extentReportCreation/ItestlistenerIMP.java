@@ -18,20 +18,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.crm.generic_utilitie.BaseClass;
 
 
-
 public class ItestlistenerIMP implements ITestListener{
 	 ExtentReports report;
-	 ExtentTest test;
-	@Override		
-   public void onFinish(ITestContext arg0) {					
-      	report.flush();		
-       		
-   }		
-
+	 ExtentTest test;		
    @Override		
-   public void onStart(ITestContext arg0) {	
+   public void onStart(ITestContext contest) {	
 	   String timeStamp = LocalDateTime.now().toString().replace(':', '-');
-       ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report"+timeStamp+".html"));
+       ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report ["+timeStamp+"] .html"));
        htmlReport.config().setDocumentTitle("Extent Report");
        htmlReport.config().setTheme(Theme.DARK);
        htmlReport.config().setReportName("Functional Test");
@@ -40,16 +33,24 @@ public class ItestlistenerIMP implements ITestListener{
        report.attachReporter(htmlReport);
        report.setSystemInfo("TestURL", "http://localhost:8888/");
        report.setSystemInfo("Platform", "Windows 10");
-       report.setSystemInfo("Reporter Name", "Keshava");
-	   
-   }		
-
+       report.setSystemInfo("Reporter Name", "Keshava");  
+   }
+   
    @Override		
-   public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {					
-       // TODO Auto-generated method stub				
-       		
-   }		
-
+   public void onFinish(ITestContext contest) {					
+      	report.flush();		
+   }
+   
+   @Override		
+   public void onTestStart(ITestResult result) {					
+      test=report.createTest(result.getMethod().getMethodName());				    		
+   }
+   
+   @Override		
+   public void onTestSuccess(ITestResult result) {					
+      test.log(Status.PASS, result.getMethod().getMethodName()+" is passed");			     		
+   }
+   
    @Override		
    public void onTestFailure(ITestResult result) {					
 //       test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
@@ -61,35 +62,35 @@ public class ItestlistenerIMP implements ITestListener{
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
+	   
 	   String timeStamp = LocalDateTime.now().toString().replace(':', '-');
 		String testname = result.getMethod().getMethodName();
 		System.out.println(testname+"Take ScreenShot");	
 		EventFiringWebDriver pdriver=new EventFiringWebDriver(BaseClass.sdriver);
 		File srcfile=pdriver.getScreenshotAs(OutputType.FILE);
 		try {
-			File destfile=new File("./ScreenShots/"+timeStamp+"+"+testname+".png");
+			File destfile=new File("./ScreenShots/"+timeStamp+"+"+testname+" .png");
 			FileUtils.copyFile(srcfile, destfile);
 		} catch (Throwable e) {
 			e.printStackTrace();
-		}
-       		
-   }		
+		}    		
+   }	
 
    @Override		
    public void onTestSkipped(ITestResult result) {					
       test.log(Status.SKIP, result.getMethod().getMethodName()+" is skipped");				
       test.log(Status.SKIP, result.getThrowable());	
-   }		
-
+   }
+   
    @Override		
-   public void onTestStart(ITestResult result) {					
-      test=report.createTest(result.getMethod().getMethodName());				
-       		
-   }		
-
-   @Override		
-   public void onTestSuccess(ITestResult arg0) {					
-      test.log(Status.PASS, arg0.getMethod().getMethodName()+" is passed");			
+   public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+	   
        		
    }
+   
+   public void onTestFailedWithTimeout(ITestResult result) {
+		
+	   
+	}
+   
 }

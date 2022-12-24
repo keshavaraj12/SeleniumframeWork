@@ -33,8 +33,9 @@ public class BaseClassForExtent {
 	@BeforeSuite
 	public void configBS() {
 		//DB connection
+		System.out.println("Datebase connection");
 		String timeStamp = LocalDateTime.now().toString().replace(':', '-');
-	    ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report"+timeStamp+".html"));		
+	    ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report ["+timeStamp+"] .html"));		
         htmlReport.config().setDocumentTitle("Extent Report");
         htmlReport.config().setTheme(Theme.STANDARD);
         htmlReport.config().setReportName("Functional Test");
@@ -48,30 +49,35 @@ public class BaseClassForExtent {
 	@BeforeTest
 	public void configBT() {
 		//parallel execution
+		System.out.println("Execute in parallel mode");
 	}
 	@BeforeClass
 	public void configBC() {
 		//launch the browser
+		System.out.println("Launch the browser");
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
+		
+		sDriver=driver;
 	}
 	@BeforeMethod
 	public void setUp() {
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		//Log into application
+		System.out.println("Log into Application");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://localhost:8888/");
-		sDriver=driver;
 	}
 	@AfterMethod
 	public void tearDown(ITestResult result) {
 		if(result.getStatus()==ITestResult.FAILURE) {
+			System.out.println("Take Screenshot "+result.getMethod().getMethodName());
 			test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
 	        test.log(Status.FAIL, result.getThrowable());
 			try {
-				String path = webLibrary.takeScreenshot(BaseClassForExtent.sDriver);
+				String path = webLibrary.takeScreenshot(BaseClassForExtent.sDriver,result.getMethod().getMethodName());
 				test.addScreenCaptureFromPath(path);
 			} catch (Throwable e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
@@ -83,20 +89,23 @@ public class BaseClassForExtent {
 			test.log(Status.SKIP, result.getMethod().getMethodName()+" is skipped");				
 		    test.log(Status.SKIP, result.getThrowable());
 		}
-		
-		driver.close();
+		System.out.println("Logout the Application");
 	}
 	@AfterClass
 	public void configAC() {
 		//close the browser
+		System.out.println("Close the browser");
+		driver.quit();
 	}
 	@AfterTest
 	public void configAT() {
-		//close browser launvhed in parallel
+		//close browser launched in parallel
+		System.out.println("Excuted sucessfully");
 	}
 	@AfterSuite
 	public void configAS() {
-		report.flush();
 		//close db
+		System.out.println("close database");
+		report.flush();
 	}
 }

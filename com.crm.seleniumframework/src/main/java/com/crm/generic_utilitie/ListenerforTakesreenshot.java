@@ -10,12 +10,13 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class Listener implements ITestListener{
-public void onTestStart(ITestResult result) {
+public class ListenerforTakesreenshot implements ITestListener{
+	public void onTestStart(ITestResult result) {
 		
 	}
 
 	public void onTestSuccess(ITestResult result) {
+		
 	}
 	
 	//for taking screenshot for failure
@@ -30,12 +31,11 @@ public void onTestStart(ITestResult result) {
 			FileUtils.copyFile(srcfile, destfile);
 		} catch (Throwable e) {
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 
-
 	public void onTestSkipped(ITestResult result) {
+		
 	}
 	
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -43,12 +43,15 @@ public void onTestStart(ITestResult result) {
 	}
 
 	public void onTestFailedWithTimeout(ITestResult result) {
+		
 			}
 
 	public void onStart(ITestContext context) {
+		
 			}
 
 	public void onFinish(ITestContext context) {
+		
 	}
 }
 

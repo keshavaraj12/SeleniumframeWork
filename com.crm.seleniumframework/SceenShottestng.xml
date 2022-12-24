@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 <listeners>
-<listener class-name="com.crm.generic_utilitie.Listener"></listener> 
+<listener class-name="com.crm.generic_utilitie.ListenerforTakesreenshot"></listener> 
 </listeners>
   <test thread-count="5" name="Test">
     <classes>

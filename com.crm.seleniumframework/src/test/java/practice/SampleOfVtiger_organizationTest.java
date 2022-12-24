@@ -9,7 +9,7 @@ import com.crm.generic_utilitie.Exel_Utility;
 import com.crm.generic_utilitie.Java_Utility;
 import com.crm.pomrepositary.HomePage;
 import com.crm.pomrepositary.OrganizationsPage;
-@Listeners(com.crm.generic_utilitie.Listener.class)
+@Listeners(com.crm.generic_utilitie.ListenerforTakesreenshot.class)
 public class SampleOfVtiger_organizationTest extends BaseClass{
 	//@Test(retryAnalyzer =com.crm.generic_utilitie.RetryAnalyser.class )
 		@Test
