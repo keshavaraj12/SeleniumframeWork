@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="extentReportCreation.Testcase2">
+      <class name="practice.SampleOfVtiger_organizationTest">
         <methods>
           <include name="AM"/>
           <include name="BM"/>
@@ -12,10 +12,10 @@
           <include name="AC"/>
           <include name="BS"/>
           <include name="BC"/>
-          <include name="testcase2"/>
+          <include name="createorganization"/>
           <include name="AT"/>
         </methods>
-      </class> <!-- extentReportCreation.Testcase2 -->
+      </class> <!-- practice.SampleOfVtiger_organizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

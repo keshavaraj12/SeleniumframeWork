@@ -29,13 +29,13 @@ public void parametermethodTest() {
 		String URL = System.getProperty("url");
 		driver.get(URL);
 		
-		String Username = System.getProperty("username");
-		driver.findElement(By.xpath("//input[@name='user_name']")).sendKeys(Username);
-		
-		String Password = System.getProperty("password");
-		driver.findElement(By.xpath("//input[@name='user_password']")).sendKeys(Password);
-		
-		driver.findElement(By.id("submitButton")).submit();
+//		String Username = System.getProperty("username");
+//		driver.findElement(By.xpath("//input[@name='user_name']")).sendKeys(Username);
+//		
+//		String Password = System.getProperty("password");
+//		driver.findElement(By.xpath("//input[@name='user_password']")).sendKeys(Password);
+//		
+//		driver.findElement(By.id("submitButton")).submit();
 		
 		driver.quit();
 }
