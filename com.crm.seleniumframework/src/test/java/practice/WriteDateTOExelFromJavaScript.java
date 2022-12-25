@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class WriteDateTOExelFromJavaScript {
 public static void main(String[] args) throws Throwable {
-	FileInputStream fis = new FileInputStream("C:\\Users\\HP\\Desktop\\Worksheet.xlsx");
+	FileInputStream fis = new FileInputStream("./src/test/resources/Worksheet.xlsx");
 	Workbook workbook = WorkbookFactory.create(fis);
 	Sheet sheet=workbook.getSheet("sheet1");
 	Row row = sheet.getRow(0);

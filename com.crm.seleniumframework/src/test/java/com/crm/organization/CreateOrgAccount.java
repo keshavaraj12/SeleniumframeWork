@@ -12,9 +12,11 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CreateOrgAccount {
 public static void main(String[] args) throws Throwable {
+	
 	String key="webdriver.chrome.driver";
 	String value="./src/main/resources/chromedriver.exe";
 	System.setProperty(key, value);
@@ -36,7 +38,7 @@ public static void main(String[] args) throws Throwable {
 	driver.findElement(By.id("submitButton")).submit();
 	
 	Random ran=new Random();
-	FileInputStream fis1 = new FileInputStream("C:\\Users\\HP\\Desktop\\Worksheet.xlsx");
+	FileInputStream fis1 = new FileInputStream("./src/test/resources/Worksheet.xlsx");
 	Workbook workbook = WorkbookFactory.create(fis1);
 	Sheet sheet=workbook.getSheet("sheet1");
 	Row row = sheet.getRow(0);

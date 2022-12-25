@@ -2,6 +2,7 @@ package extentReportCreation;
 
 import java.io.File;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -16,20 +17,21 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.crm.generic_utilitie.BaseClass;
+import com.crm.generic_utilitie.WebDriver_Utility;
 
 
 public class ItestlistenerIMP implements ITestListener{
 	 ExtentReports report;
 	 ExtentTest test;		
    @Override		
-   public void onStart(ITestContext contest) {	
+   public void onStart(ITestContext contest) {
 	   String timeStamp = LocalDateTime.now().toString().replace(':', '-');
        ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report ["+timeStamp+"] .html"));
        htmlReport.config().setDocumentTitle("Extent Report");
        htmlReport.config().setTheme(Theme.DARK);
        htmlReport.config().setReportName("Functional Test");
        
-        report=new ExtentReports();
+       report=new ExtentReports();
        report.attachReporter(htmlReport);
        report.setSystemInfo("TestURL", "http://localhost:8888/");
        report.setSystemInfo("Platform", "Windows 10");
@@ -50,22 +52,22 @@ public class ItestlistenerIMP implements ITestListener{
    public void onTestSuccess(ITestResult result) {					
       test.log(Status.PASS, result.getMethod().getMethodName()+" is passed");			     		
    }
-   
+   WebDriver_Utility webLibrary=new WebDriver_Utility();
    @Override		
-   public void onTestFailure(ITestResult result) {					
+   public void onTestFailure(ITestResult result) {
+	   
 //       test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
 //       test.log(Status.FAIL, result.getThrowable());
 //		try {
-//			String path = WebDriverUtiity.takeScreenshot(BaseClass.sdriver, result.getMethod().getMethodName());
+//			String path = webLibrary.takeScreenshot(BaseClass.sdriver, result.getMethod().getMethodName());
 //			test.addScreenCaptureFromPath(path);
 //		} catch (Throwable e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 	   
 	   String timeStamp = LocalDateTime.now().toString().replace(':', '-');
 		String testname = result.getMethod().getMethodName();
-		System.out.println(testname+"Take ScreenShot");	
+		System.out.println(testname+" Take ScreenShot");	
 		EventFiringWebDriver pdriver=new EventFiringWebDriver(BaseClass.sdriver);
 		File srcfile=pdriver.getScreenshotAs(OutputType.FILE);
 		try {

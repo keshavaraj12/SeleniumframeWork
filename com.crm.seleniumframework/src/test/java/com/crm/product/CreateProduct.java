@@ -36,7 +36,7 @@ public static void main(String[] args) throws Throwable {
 	driver.findElement(By.id("submitButton")).submit();
 	
 	Random ran=new Random();
-	FileInputStream fis1 = new FileInputStream("C:\\Users\\HP\\Desktop\\Worksheet.xlsx");
+	FileInputStream fis1 = new FileInputStream("./src/test/resources/Worksheet.xlsx");
 	Workbook workbook = WorkbookFactory.create(fis1);
 	Sheet sheet=workbook.getSheet("sheet1");
 	Row row = sheet.getRow(0);

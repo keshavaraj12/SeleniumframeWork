@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class Exel_Utility {
 	public String readStringDataFromExcel(String sheetName,int rowNum,int cellNum) throws IOException {
-		FileInputStream fis=new FileInputStream("C:\\Users\\HP\\Desktop\\Worksheet.xlsx");
+		FileInputStream fis=new FileInputStream("./src/test/resources/Worksheet.xlsx");
 		Workbook workbook = WorkbookFactory.create(fis);
 		Sheet sheet = workbook.getSheet(sheetName);
 		Row row = sheet.getRow(rowNum);
