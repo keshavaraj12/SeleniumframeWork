@@ -3,19 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.SampleOfVtiger_organizationTest">
+      <class name="seleniumgrid.Launch_Browser1">
         <methods>
-          <include name="AM"/>
-          <include name="BM"/>
-          <include name="AS"/>
-          <include name="BT"/>
-          <include name="AC"/>
-          <include name="BS"/>
-          <include name="BC"/>
-          <include name="createorganization"/>
-          <include name="AT"/>
+          <include name="lanchbrowser"/>
         </methods>
-      </class> <!-- practice.SampleOfVtiger_organizationTest -->
+      </class> <!-- seleniumgrid.Launch_Browser1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Launching_Browser {
+public class Launching_CrossBrowser {
 	@Parameters({"browser"})
 	@Test
 	public void lanchbrowser(String browser) throws MalformedURLException {
