@@ -15,9 +15,9 @@ public class Testcase2 extends BaseClass{
 		
 		driver.findElement(By.name("user_password")).sendKeys("manager");
 		Assert.assertTrue(false);
-//		SoftAssert soft=new SoftAssert();
-//		soft.assertTrue(false);
-//		soft.assertAll();
+		
+		SoftAssert soft=new SoftAssert();
+		soft.assertAll();
 	}
 
 }

@@ -7,9 +7,9 @@
       </classes>
       </test>
       
-      <test thread-count="5" parallel="tests" name="Test2">
-      <classes>
-      <class name="com.crm.vtigerTest.Vtiger_CreateOrganizationTest"/>
-    </classes>
-  </test> <!-- Test -->
+       <test thread-count="5" parallel="tests" name="Test2">
+    <classes>
+       <class name="com.crm.vtigerTest.Vtiger_CreateOrganizationTest"/>
+      </classes>
+      </test>
 </suite> <!-- Suite -->

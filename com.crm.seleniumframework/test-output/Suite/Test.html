@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Dec 27 00:33:25 IST 2022</td>
+<td>Started on:</td><td>Tue Jan 10 00:23:56 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (32 ms)</td>
+<tr><td>Total time:</td><td>41 seconds (41193 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,27 +75,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER.differentOSTest()'><b>differentOSTest</b><br>Test class: seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;osname&apos; is required by @Test on method differentOSTest but has not been marked @Optional or defined
-in C:\Users\HP\git\repository1\com.crm.seleniumframework\browserstackDifferentOS_VERSION_BROWSERtestng.xml
+<td title='extentReportCreation.Testcaseforbase.testcasebase()'><b>testcasebase</b><br>Test class: extentReportCreation.Testcaseforbase</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at extentReportCreation.Testcaseforbase.testcasebase(Testcaseforbase.java:18)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at java.base/java.lang.Thread.run(Thread.java:831)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1002855", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1002855'><pre>org.testng.TestNGException: 
-Parameter &apos;osname&apos; is required by @Test on method differentOSTest but has not been marked @Optional or defined
-in C:\Users\HP\git\repository1\com.crm.seleniumframework\browserstackDifferentOS_VERSION_BROWSERtestng.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1522875460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1522875460'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at extentReportCreation.Testcaseforbase.testcasebase(Testcaseforbase.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
@@ -112,7 +115,25 @@ in C:\Users\HP\git\repository1\com.crm.seleniumframework\browserstackDifferentOS
 	at java.base/java.lang.Thread.run(Thread.java:831)
 </pre></div></td>
 <td>0</td>
-<td>seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER@2c1b194a</td></tr>
+<td>extentReportCreation.Testcaseforbase@298a5e20</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='extentReportCreation.Testcase3.testcase3()'><b>testcase3</b><br>Test class: extentReportCreation.Testcase3</td>
+<td></td>
+<td>0</td>
+<td>extentReportCreation.Testcase3@2a7f1f10</td></tr>
+<tr>
+<td title='extentReportCreation.Testcase1.testcase1()'><b>testcase1</b><br>Test class: extentReportCreation.Testcase1</td>
+<td></td>
+<td>0</td>
+<td>extentReportCreation.Testcase1@4145bad8</td></tr>
 </table><p>
 </body>
 </html>

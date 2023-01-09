@@ -1,6 +1,7 @@
 package com.crm.generic_utilitie;
 
 import java.io.File;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
@@ -61,12 +62,14 @@ public class BaseClassForExtent {
 		sDriver=driver;
 	}
 	@BeforeMethod
-	public void setUp() {
+	public void setUp(ITestResult result) {
 		//Log into application
 		System.out.println("Log into Application");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("http://localhost:8888/");
+		test=report.createTest(result.getMethod().getMethodName());
+		test.log(Status.INFO, result.getMethod().getMethodName());
 	}
 	@AfterMethod
 	public void tearDown(ITestResult result) {

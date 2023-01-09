@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,12 +51,12 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\HP\git\repository1\com.crm.seleniumframework\browserstackDifferentOS_VERSION_BROWSERtestng.xml</span>
+                    <span>C:\Users\HP\git\repository1\com.crm.seleniumframework\ExtentreportFromBasetestng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="extentReportCreation.Testcaseforbase" class="method navigator-link" hash-for-method="testcasebase">testcasebase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,17 +118,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER" class="method navigator-link" hash-for-method="differentOSTest(Windows, 10, chrome)">differentOSTest(Windows, 10, chrome)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="extentReportCreation.Testcase1" class="method navigator-link" hash-for-method="testcase1">testcase1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER" class="method navigator-link" hash-for-method="differentOSTest(Windows, 11, firefox)">differentOSTest(Windows, 11, firefox)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER" class="method navigator-link" hash-for-method="differentOSTest(OS X, Ventura, edge)">differentOSTest(OS X, Ventura, edge)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="extentReportCreation.Testcase3" class="method navigator-link" hash-for-method="testcase3">testcase3</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -129,34 +138,56 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER</span>
+              <img src="failed.png"/>
+              <span class="class-name">extentReportCreation.Testcaseforbase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="differentOSTest(Windows, 10, chrome)">
-                  </a> <!-- differentOSTest(Windows, 10, chrome) -->
-                  <span class="method-name">differentOSTest</span>
-                  <span class="parameters">(Windows, 10, chrome)</span>
+                  <a name="testcasebase">
+                  </a> <!-- testcasebase -->
+                  <span class="method-name">testcasebase</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at extentReportCreation.Testcaseforbase.testcasebase(Testcaseforbase.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">extentReportCreation.Testcase1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="differentOSTest(Windows, 11, firefox)">
-                  </a> <!-- differentOSTest(Windows, 11, firefox) -->
-                  <span class="method-name">differentOSTest</span>
-                  <span class="parameters">(Windows, 11, firefox)</span>
+                  <a name="testcase1">
+                  </a> <!-- testcase1 -->
+                  <span class="method-name">testcase1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">extentReportCreation.Testcase3</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="differentOSTest(OS X, Ventura, edge)">
-                  </a> <!-- differentOSTest(OS X, Ventura, edge) -->
-                  <span class="method-name">differentOSTest</span>
-                  <span class="parameters">(OS X, Ventura, edge)</span>
+                  <a name="testcase3">
+                  </a> <!-- testcase3 -->
+                  <span class="method-name">testcase3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -164,37 +195,20 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\HP\git\repository1\com.crm.seleniumframework\browserstackDifferentOS_VERSION_BROWSERtestng.xml</span>
+            <span class="header-content">C:\Users\HP\git\repository1\com.crm.seleniumframework\ExtentreportFromBasetestng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test1&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
-    &lt;parameter name=&quot;version&quot; value=&quot;10&quot;/&gt;
-    &lt;parameter name=&quot;osname&quot; value=&quot;Windows&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER&quot;/&gt;
+      &lt;class name=&quot;extentReportCreation.Testcase1&quot;/&gt;
+      &lt;class name=&quot;extentReportCreation.Testcaseforbase&quot;/&gt;
+      &lt;class name=&quot;extentReportCreation.Testcase3&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test2&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-    &lt;parameter name=&quot;version&quot; value=&quot;11&quot;/&gt;
-    &lt;parameter name=&quot;osname&quot; value=&quot;Windows&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test2 --&gt;
-  &lt;test thread-count=&quot;5&quot; parallel=&quot;tests&quot; name=&quot;Test3&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
-    &lt;parameter name=&quot;version&quot; value=&quot;Ventura&quot;/&gt;
-    &lt;parameter name=&quot;osname&quot; value=&quot;OS X&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test3 --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,13 +220,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test2 (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Test3 (1 class)</span>
+                <span class="test-name">Test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -240,22 +248,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'differentOSTest')
-data.setCell(0, 2, 'seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER')
-data.setCell(0, 3, 21970);
+data.setCell(0, 1, 'testcasebase')
+data.setCell(0, 2, 'extentReportCreation.Testcaseforbase')
+data.setCell(0, 3, 105);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'differentOSTest')
-data.setCell(1, 2, 'seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER')
-data.setCell(1, 3, 17888);
+data.setCell(1, 1, 'testcase1')
+data.setCell(1, 2, 'extentReportCreation.Testcase1')
+data.setCell(1, 3, 4);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'differentOSTest')
-data.setCell(2, 2, 'seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER')
-data.setCell(2, 3, 13101);
+data.setCell(2, 1, 'testcase3')
+data.setCell(2, 2, 'extentReportCreation.Testcase3')
+data.setCell(2, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -270,9 +278,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">extentReportCreation.Testcase3</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">BT</span>
+                <br/>
+                <span class="ignored-method-name">AS</span>
+                <br/>
+                <span class="ignored-method-name">BS</span>
+                <br/>
+                <span class="ignored-method-name">AT</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -281,19 +302,128 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">seleniumbrowserStack.LaunchingInDifferentOS_VERSION_BROWSER</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">differentOSTest(Windows, 11, firefox)</span>
+              <div class="chronological-class-name">extentReportCreation.Testcase1</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">BS</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcaseforbase</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">configBS</span>
+                <span class="method-start">7 ms</span>
+              </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcase1</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">BT</span>
+                <span class="method-start">169 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcaseforbase</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">configBT</span>
+                <span class="method-start">170 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcase1</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">BC</span>
+                <span class="method-start">183 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">BM</span>
+                <span class="method-start">2108 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">differentOSTest(Windows, 10, chrome)</span>
-                <span class="method-start">1 ms</span>
+                <span class="method-name">testcase1</span>
+                <span class="method-start">10831 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">AM</span>
+                <span class="method-start">10835 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AC</span>
+                <span class="method-start">10843 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcaseforbase</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">configBC</span>
+                <span class="method-start">11359 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp([TestResult name={null} status=CREATED method=Testcaseforbase.testcasebase()[pri:0, instance:extentR...)</span>
+                <span class="method-start">12681 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">differentOSTest(OS X, Ventura, edge)</span>
-                <span class="method-start">1 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testcasebase</span>
+                <span class="method-start">17560 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testcasebase status=FAILURE method=Testcaseforbase.testcasebase()[pri:0, instance:e...)</span>
+                <span class="method-start">17669 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">configAC</span>
+                <span class="method-start">17845 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcase3</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">BC</span>
+                <span class="method-start">18527 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">BM</span>
+                <span class="method-start">19434 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">AM</span>
+                <span class="method-start">41049 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AC</span>
+                <span class="method-start">41049 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="test-method">
+                <span class="method-name">testcase3</span>
+                <span class="method-start">41049 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcaseforbase</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">configAS</span>
+                <span class="method-start">41359 ms</span>
+              </div> <!-- configuration-suite after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcase1</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">AS</span>
+                <span class="method-start">41359 ms</span>
+              </div> <!-- configuration-suite after -->
+              <div class="configuration-test after">
+                <span class="method-name">AT</span>
+                <span class="method-start">41359 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">extentReportCreation.Testcaseforbase</div> <!-- chronological-class-name -->
+              <div class="configuration-test after">
+                <span class="method-name">configAT</span>
+                <span class="method-start">41359 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
