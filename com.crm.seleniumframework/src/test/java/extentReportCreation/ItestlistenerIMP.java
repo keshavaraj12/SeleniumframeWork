@@ -45,7 +45,8 @@ public class ItestlistenerIMP implements ITestListener{
    
    @Override		
    public void onTestStart(ITestResult result) {					
-      test=report.createTest(result.getMethod().getMethodName());				    		
+      test=report.createTest(result.getMethod().getMethodName());
+      test.log(Status.INFO, result.getMethod().getMethodName());
    }
    
    @Override		
