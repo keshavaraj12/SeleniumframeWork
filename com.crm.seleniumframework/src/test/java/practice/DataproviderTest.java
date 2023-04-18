@@ -31,6 +31,7 @@ public void companyDetails(String name,String sponsorname,String size ) throws T
 	driver.quit();
 	Thread.sleep(2000);
 }
+	
 @DataProvider
 public Object[][] dataProvider_test(){
 	Object[][] objArr=new Object[3][3];

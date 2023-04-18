@@ -3,10 +3,9 @@ package com.crm.generic_utilitie;
 import java.io.File;
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -36,7 +35,7 @@ public class BaseClassForExtent {
 		//DB connection
 		System.out.println("Datebase connection");
 		String timeStamp = LocalDateTime.now().toString().replace(':', '-');
-	    ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report ["+timeStamp+"] .html"));		
+	    ExtentHtmlReporter htmlReport=new ExtentHtmlReporter(new File(".\\ExtentReport\\report ["+timeStamp+"] .html"));
         htmlReport.config().setDocumentTitle("Extent Report");
         htmlReport.config().setTheme(Theme.STANDARD);
         htmlReport.config().setReportName("Functional Test");
@@ -56,8 +55,10 @@ public class BaseClassForExtent {
 	public void configBC() {
 		//launch the browser
 		System.out.println("Launch the browser");
+		ChromeOptions cop=new ChromeOptions();
+		cop.addArguments("--remote-allow-origins=*");
 		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		driver=new ChromeDriver(cop);
 		
 		sDriver=driver;
 	}
@@ -89,6 +90,7 @@ public class BaseClassForExtent {
 			test.log(Status.PASS, result.getMethod().getMethodName()+" is passed");
 		}
 		else if(result.getStatus()==ITestResult.SKIP) {
+
 			test.log(Status.SKIP, result.getMethod().getMethodName()+" is skipped");				
 		    test.log(Status.SKIP, result.getThrowable());
 		}

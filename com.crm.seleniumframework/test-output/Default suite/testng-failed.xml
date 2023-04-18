@@ -3,13 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="extentReportCreation.GeneralExtentReport">
+      <class name="extentReportCreation.Testcaseforbase">
         <methods>
-          <include name="startTest"/>
-          <include name="extentReportsDemo"/>
-          <include name="endTest"/>
+          <include name="configAS"/>
+          <include name="configBT"/>
+          <include name="configAC"/>
+          <include name="tearDown"/>
+          <include name="configAT"/>
+          <include name="setUp"/>
+          <include name="testcasebase"/>
+          <include name="configBS"/>
+          <include name="configBC"/>
         </methods>
-      </class> <!-- extentReportCreation.GeneralExtentReport -->
+      </class> <!-- extentReportCreation.Testcaseforbase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

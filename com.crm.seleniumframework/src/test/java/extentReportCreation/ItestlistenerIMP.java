@@ -57,8 +57,9 @@ public class ItestlistenerIMP implements ITestListener{
    @Override		
    public void onTestFailure(ITestResult result) {
 	   
-//       test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
-//       test.log(Status.FAIL, result.getThrowable());
+       test.log(Status.FAIL, result.getMethod().getMethodName()+" is failed");
+       test.log(Status.FAIL, result.getThrowable());
+       
 //		try {
 //			String path = webLibrary.takeScreenshot(BaseClass.sdriver, result.getMethod().getMethodName());
 //			test.addScreenCaptureFromPath(path);
@@ -74,6 +75,7 @@ public class ItestlistenerIMP implements ITestListener{
 		try {
 			File destfile=new File("./ScreenShots/"+timeStamp+"+"+testname+" .png");
 			FileUtils.copyFile(srcfile, destfile);
+			test.addScreenCaptureFromPath(destfile.getAbsolutePath());
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}    		
